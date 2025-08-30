@@ -234,3 +234,48 @@ body {
     .menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .menu-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
+
+/* ==========================================================================
+   8. Custom Scrollbar Styling (Add This at the End)
+   ========================================================================== */
+
+/* This targets the scrollbar for Webkit browsers like Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+    width: 10px; /* Sets the width of the scrollbar */
+}
+
+/* This targets the "track" (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: var(--color-background); /* Makes the track match your page background */
+}
+
+/* This targets the "thumb" (the part of the scrollbar you drag) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-border); /* A slightly lighter color for the thumb */
+    border-radius: 10px; /* Rounds the corners of the thumb */
+    border: 2px solid var(--color-background); /* Creates a nice padding effect */
+}
+
+/* This styles the thumb when you hover over it */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-secondary-text); /* Makes it slightly brighter on hover */
+}
+
+/* ==========================================================================
+   8. Hide the Scrollbar While Allowing Scrolling
+   ========================================================================== */
+
+/* For Webkit-based browsers (Chrome, Safari, Edge, Opera) */
+body::-webkit-scrollbar {
+  display: none; /* This completely hides the scrollbar */
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: none; /* This hides the scrollbar in Firefox */
+}
+
+/* For Internet Explorer and older Edge versions (less common now) */
+body {
+  -ms-overflow-style: none; /* Hides the scrollbar in IE/Edge */
+}
