@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             span.innerHTML = char === ' ' ? '&nbsp;' : char;
             
             // Apply a staggered animation delay based on the letter's position
-            span.style.animationDelay = `${index * 0.05}s`;
+            span.style.animationDelay = `${index * 0.035}s`;
             
             heroTitle.appendChild(span);
         });
