@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const initPortfolio = () => {
         initLandingAnimations();
         initMobileMenu();
-        initHeaderScroll();
+        initHeaderScroll(); // Restored the call to the function
         initScrollReveal();
     };
 
     /**
      * Handles the animations that play when the page first loads.
      * 1. Animates the main hero title with a letter-by-letter reveal.
-     * 2. The other hero elements (.hero-subtitle, etc.) are animated purely by CSS.
+     * 2. The other hero elements are animated purely by CSS.
      */
     const initLandingAnimations = () => {
         const heroTitle = document.getElementById('hero-title');
@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     /**
+     * RESTORED FUNCTION
      * Makes the header hide on scroll down and appear on scroll up.
      * This maximizes screen space for the content.
      */
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Scrolling up or at the top of the page: show the header
                 header.classList.remove('header-hidden');
             }
-            // Update the last scroll position
+            // Update the last scroll position for the next scroll event
             lastScrollY = window.scrollY;
         });
     };
@@ -109,6 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Run the main initialization function
+    // Run the main initialization function to start all scripts
     initPortfolio();
 });
